@@ -1,0 +1,13 @@
+﻿
+<h1>All devices</h1>
+<h3>@Model.CurrentCategory</h3>
+@{ 
+    foreach(var device in Model.Devices) 
+    {
+        <div>
+            <h3>Model: @device.Name</h3>
+            <p>Price: $@device.Price</p>
+
+        </div>
+    }
+}
