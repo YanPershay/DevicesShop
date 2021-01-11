@@ -9,7 +9,7 @@ namespace DevicesShop.Data.Interfaces
     public interface IDevices
     {
         IEnumerable<Device> Devices { get; }
-        IEnumerable<Device> FavDevices { get; set; }
+        IEnumerable<Device> FavDevices { get;}
         Device GetDevice(int id);
     }
 }
