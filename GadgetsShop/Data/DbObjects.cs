@@ -43,10 +43,43 @@ namespace DevicesShop.Data
                     },
                     new Device
                     {
-                        Name = "iBUYPOWER Gaming PC",
+                        Name = "iBUYPOWER Gaming",
                         ShortDesc = "Gaming computer",
                         LongDesc = "GGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
                         ImageUrl = "/img/pk.jpg",
+                        Price = 700,
+                        IsFavourite = true,
+                        Available = true,
+                        Category = Categories["Computers"]
+                    },
+                    new Device
+                    {
+                        Name = "Playstation 4",
+                        ShortDesc = "Old playstation",
+                        LongDesc = "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+                        ImageUrl = "/img/ps4.png",
+                        Price = 700,
+                        IsFavourite = true,
+                        Available = true,
+                        Category = Categories["Game zone"]
+                    },
+                    new Device
+                    {
+                        Name = "Redmi Note 9 Pro",
+                        ShortDesc = "New xiaomi",
+                        LongDesc = "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+                        ImageUrl = "/img/xiaomi.png",
+                        Price = 700,
+                        IsFavourite = true,
+                        Available = true,
+                        Category = Categories["Mobile phones"]
+                    },
+                    new Device
+                    {
+                        Name = "Notebook Xiaomi",
+                        ShortDesc = "Portative nice",
+                        LongDesc = "PPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP",
+                        ImageUrl = "/img/xiaominote.jpg",
                         Price = 700,
                         IsFavourite = true,
                         Available = true,

@@ -1,0 +1,13 @@
+﻿@model HomeViewModel
+
+
+<h1 class="pt-3">Favourite devices</h1>
+<br/>
+<div class="row mt-2 mb-2">
+    @{
+        foreach (Device device in Model.FavDevices)
+        {
+            @Html.Partial("AllDevices", device)
+        } 
+    }
+</div>

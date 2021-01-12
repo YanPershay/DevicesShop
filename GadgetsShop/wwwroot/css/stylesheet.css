@@ -1,6 +1,16 @@
 ﻿img {
-    float: left;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
+    width: 200px;
+    height: 230px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    border-color: gray;
+    border-radius: 10px;
 }
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
