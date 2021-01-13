@@ -11,7 +11,6 @@ D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\scopedcss\bundle\
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.TagHelpers.input.cache
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.TagHelpers.output.cache
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.RazorCoreGenerate.cache
-D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Devices\ProductsList.cshtml.g.cs
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.RazorTargetAssemblyInfo.cache
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.RazorTargetAssemblyInfo.cs
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.dll
@@ -35,7 +34,6 @@ D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\DevicesShop.genru
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
-D:\Programming\DevicesShop\GadgetsShop\bin\Debug\netcoreapp3.1\dbsettings.json
 D:\Programming\DevicesShop\GadgetsShop\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
 D:\Programming\DevicesShop\GadgetsShop\bin\Debug\netcoreapp3.1\EntityFramework.dll
 D:\Programming\DevicesShop\GadgetsShop\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -91,3 +89,6 @@ D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\ShopC
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 D:\Programming\DevicesShop\GadgetsShop\bin\Debug\netcoreapp3.1\libman.json
 D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Device\ProductsList.cshtml.g.cs
+D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Checkout.cshtml.g.cs
+D:\Programming\DevicesShop\GadgetsShop\obj\Debug\netcoreapp3.1\Razor\Views\Order\Complete.cshtml.g.cs

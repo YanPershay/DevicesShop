@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DevicesShop.Data.Repository
 {
-    public class DeviceRepository : IDevices
+    public class DeviceRepository : IAllDevices
     {
         private readonly DeviceContext _context;
 

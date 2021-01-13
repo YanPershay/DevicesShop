@@ -3,11 +3,12 @@
 <div class="container">
     @foreach(var item in Model.ShopCart.ListShopItems)
     {
-        <div class="alert alert-warning mt-3">
-            <b>Device: </b>@item.Device.Name<br />
-            <b>Price: </b>$@item.Device.Price<br />
-        </div>
+    <div class="alert alert-warning mt-3">
+        <img src="@item.Device.ImageUrl" alt="@item.Device.Name" /><br/>
+        <b>Device: </b>@item.Device.Name<br />
+        <b>Price: </b>$@item.Device.Price<br />
+    </div>
     }
     <hr/>
-    <div class="btn btn-danger" asp-controller="Order">Pay</div>
+    <a class="btn btn-danger mb-5" asp-controller="Order" asp-action="Checkout">Pay</a>
 </div>
