@@ -5,7 +5,7 @@ There is the Home page, which show us all Products in store.
 <img src="./Assets/1.jpg">
 <br>
 
-All products divides to some categories and нou can choose which of the categories to display.
+All products divides to some categories and you can choose which of the categories to display.
 <img src="./Assets/4.jpg">
 <br>
 
