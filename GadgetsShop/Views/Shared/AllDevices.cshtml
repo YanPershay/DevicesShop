@@ -5,5 +5,5 @@
     <h4>@Model.Name</h4>
     <p>@Model.ShortDesc</p>
     <p>Price: $@Model.Price</p>
-    <p><a class="btn btn-warning" href="#">More</a></p>
+    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="Index" asp-route-id="@Model.Id">Add to cart</a></p>
 </div>

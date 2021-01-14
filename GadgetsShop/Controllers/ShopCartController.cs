@@ -11,17 +11,24 @@ namespace DevicesShop.Controllers
 {
     public class ShopCartController : Controller
     {
-        private readonly IDevices _deviceRepository;
+        private readonly IAllDevices _deviceRepository;
         private readonly ShopCart _shopCart;
 
-        public ShopCartController(IDevices deviceRepository, ShopCart shopCart)
+        public ShopCartController(IAllDevices deviceRepository, ShopCart shopCart)
         {
             _deviceRepository = deviceRepository;
             _shopCart = shopCart;
         }
 
-        public ViewResult Index()
+        public ViewResult Index(int id)
         {
+            var item = _deviceRepository.Devices.FirstOrDefault(i => i.Id == id);
+
+            if (item != null)
+            {
+                _shopCart.AddToCart(item);
+            }
+
             var items = _shopCart.GetAllItems();
             _shopCart.ListShopItems = items;
 
@@ -31,18 +38,6 @@ namespace DevicesShop.Controllers
             };
 
             return View(viewModel);
-        }
-
-        public RedirectToActionResult AddToCart(int id)
-        {
-            var item = _deviceRepository.Devices.FirstOrDefault(i => i.Id == id);
-
-            if(item != null)
-            {
-                _shopCart.AddToCart(item);
-            }
-
-            return RedirectToAction("Index");
-        }
+        } 
     }
 }
