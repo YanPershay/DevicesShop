@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace DevicesShop.Controllers
 {
-    public class DeviceController : Controller
+    public class DevicesController : Controller
     {
-        private readonly IAllDevices _devices;
+        private readonly IDevices _devices;
         private readonly IDeviceCategory _categories;
 
-        public DeviceController(IAllDevices devices, IDeviceCategory categories)
+        public DevicesController(IDevices devices, IDeviceCategory categories)
         {
             _devices = devices;
             _categories = categories;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DevicesShop.Data.Interfaces
 {
-    public interface IAllDevices
+    public interface IDevices
     {
         IEnumerable<Device> Devices { get; }
         IEnumerable<Device> FavDevices { get;}

@@ -11,9 +11,9 @@ namespace DevicesShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IAllDevices _deviceRepository;
+        private readonly IDevices _deviceRepository;
 
-        public HomeController(IAllDevices deviceRepository)
+        public HomeController(IDevices deviceRepository)
         {
             _deviceRepository = deviceRepository;
         }

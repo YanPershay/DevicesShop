@@ -11,9 +11,7 @@ namespace DevicesShop.Data
         }
 
         public DbSet<Device> Devices { get; set; }
-        public DbSet<ShopCartItem> ShopCartItems { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<OrderDetail> OrderDetails { get; set; }
-        public DbSet<Order> Orders { get; set; }
+        public DbSet<ShopCartItem> ShopCartItems { get; set; }
     }
 }

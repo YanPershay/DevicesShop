@@ -1,5 +1,6 @@
 using DevicesShop.Data;
 using DevicesShop.Data.Interfaces;
+using DevicesShop.Data.Mocks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,23 +18,20 @@ namespace GadgetsShop
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IConfigurationRoot _connString;
+        public Startup(IWebHostEnvironment hostingEnvironment)
         {
-            Configuration = configuration;
+            _connString = new ConfigurationBuilder().SetBasePath(hostingEnvironment.ContentRootPath)
+                                                    .AddJsonFile("dbsettings.json").Build();
         }
-        private IConfiguration Configuration { get; }
-
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connection = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContextPool<DeviceContext>(options =>
-                options.UseSqlServer(connection));
+            services.AddDbContext<DeviceContext>(options => options.UseSqlServer(_connString.GetConnectionString("DefaultConnection")));
 
-            services.AddTransient<IAllDevices, DeviceRepository>();
+            services.AddTransient<IDevices, DeviceRepository>();
             services.AddTransient<IDeviceCategory, CategoryRepository>();
-            services.AddTransient<IAllOrders, OrderRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShopCart.GetShopCart(sp));
@@ -45,11 +43,9 @@ namespace GadgetsShop
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DeviceContext db)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseDeveloperExceptionPage();
-
-            db.Database.EnsureCreated();
 
             app.UseStatusCodePages();
 
@@ -70,11 +66,11 @@ namespace GadgetsShop
                     defaults: new { Controller = "Devices", Action = "ProductsList" });
             });
 
-            //using (var scope = app.ApplicationServices.CreateScope())
-            //{
-            //    DeviceContext context = scope.ServiceProvider.GetRequiredService<DeviceContext>();
-            //    DbObjects.Init(context);
-            //}
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                DeviceContext context = scope.ServiceProvider.GetRequiredService<DeviceContext>();
+                DbObjects.Init(context);
+            }
         }
     }
 }

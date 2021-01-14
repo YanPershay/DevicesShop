@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DevicesShop.Data.Models
 {
@@ -31,22 +32,17 @@ namespace DevicesShop.Data.Models
 
         public void AddToCart(Device device)
         {
-            var shopCartItem = new ShopCartItem()
-            {
-                Device = device,
-                Price = device.Price,
-                ShopCartId = ShopCartId
-            };
-
-            _context.ShopCartItems.Add(shopCartItem);
+            _context.ShopCartItems.Add(
+                new ShopCartItem()
+                {
+                    ShopCartId = ShopCartId,
+                    Device = device,
+                    Price = device.Price
+                });
 
             _context.SaveChanges();
         }
 
-        public List<ShopCartItem> GetAllItems()
-        {
-            var res = _context.ShopCartItems.Where(i => i.ShopCartId == ShopCartId).ToList();
-            return res;
-        }
+        public List<ShopCartItem> GetAllItems() => _context.ShopCartItems.Where(i => i.ShopCartId == ShopCartId).Include(i => i.Device).ToList();
     }
 }
